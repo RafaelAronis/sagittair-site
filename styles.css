@@ -356,3 +356,104 @@ body {
     .nav-links { display: none; } /* In a real project, add a hamburger menu */
     .hero-logo { width: 80%; }
 }
+
+/* --- RESPONSIVIDADE PARA CELULARES (Telas até 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Ajustes Gerais */
+    .container {
+        padding: 40px 15px; /* Reduz o espaçamento lateral e vertical */
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Títulos menores para não quebrar linha */
+        margin-bottom: 30px;
+    }
+
+    /* Navbar: Em vez de sumir, vamos empilhar ou simplificar */
+    .nav-links {
+        display: none; /* Mantemos oculto por enquanto, ou você pode usar um menu hambúrguer */
+    }
+    
+    .nav-container {
+        justify-content: center; /* Centraliza a logo no mobile */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .hero-logo {
+        width: 100%; /* Garante que a logo não escape da tela */
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    /* Product Showcase (Turret) */
+    .product-showcase {
+        flex-direction: column; /* Coloca a imagem em cima e os cards embaixo */
+        gap: 30px;
+    }
+
+    .product-image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .product-image img {
+        height: 300px; /* Reduz a altura da imagem no mobile */
+    }
+
+    .product-features {
+        grid-template-columns: 1fr; /* Cards agora ocupam a linha toda (1 coluna) */
+    }
+
+    /* Grid de Vídeos e Serviços */
+    .services-grid {
+        grid-template-columns: 1fr; /* Vídeos um embaixo do outro */
+    }
+
+    /* Ajuste do vídeo com Clip-path (O vídeo cortado) */
+    .video-display-extra {
+        margin-top: 0;
+        clip-path: none; /* Remove o corte complexo que pode bugar no celular */
+        border-radius: 15px;
+    }
+
+    /* Founders (Liderança) */
+    .founders-grid {
+        grid-template-columns: 1fr; /* Um fundador por linha */
+        gap: 20px;
+    }
+
+    /* Awards (Prêmios) */
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .award-item img {
+        max-width: 200px; /* Logos menores no celular */
+    }
+
+    /* Contato */
+    .linkedin-group {
+        flex-direction: column; /* Botões do LinkedIn empilhados */
+        align-items: center;
+    }
+
+    .linkedin-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #copy-email {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}

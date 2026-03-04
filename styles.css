@@ -52,7 +52,13 @@ body {
     padding: 0 20px;
 }
 
-.logo img { height: 35px; }
+.logo img {
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    transition: var(--transition);
+}
 
 .nav-links {
     display: flex;
@@ -70,6 +76,18 @@ body {
 }
 
 .nav-links a:hover { color: var(--accent-blue); }
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px; 
+        position: static; 
+        transform: none;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+}
 
 /* HERO SECTION */
 .hero {

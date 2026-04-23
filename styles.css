@@ -308,6 +308,7 @@ body {
     filter: grayscale(1); 
     transition: var(--transition);
     margin-bottom: 25px;
+    border-radius: 15px;
 }
 
 .award-item:hover img {
